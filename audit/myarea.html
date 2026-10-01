@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>myarea - LPM2</title>
+<meta name="Generator" content="Gnomen CMS 4 | Estate Agency Edition - Gnomen Ltd copyrights 2015."><script type="text/javascript" src="/scripts/common.js"></script><meta name="Keywords" content=""><meta name="Description" content=""><script type="text/javascript">
+function selectall(which)
+{
+ total = document.advancedsearch.elements.length;
+ for(i=0; i<total; i++){
+  if(document.advancedsearch.elements[i].className == which){
+   document.advancedsearch.elements[i].checked = 1; 
+  }
+ }
+}
+function unselectall(which)
+{
+ total = document.advancedsearch.elements.length;
+ for(i=0; i<total; i++){
+  if(document.advancedsearch.elements[i].className == which){
+   document.advancedsearch.elements[i].checked = 0;
+  }
+ }
+}
+
+function setType(type) {
+ if(type == 1) t = G_NORMAL_MAP;
+ if(type == 2) t = G_SATELLITE_MAP;
+ if(type == 3) t = G_HYBRID_MAP;
+ map.setMapType(t);
+}
+function zoom_map(level) {
+  map.setZoom(level);
+  return level;
+}
+</script>
+
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/details.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/text.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/boxes.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/quick-search.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/results.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/style.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/myarea.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/form.css">
+<link rel="stylesheet" media="all" type="text/css" href="/?load=css&amp;file=lpmoxford.co.uk_master/styles/template.css">
+
+
+
+
+<!--myarea code-->
+<script type="text/javascript" src="/admin/scripts/popcalendar.js"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.zZZZhVqDDCw.L.W.O/am=RACAAQ/d=0/rs=AN8SPfrIRTuPKnuGpVEzhjxa8mFYRj7j_A/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.en_GB.bl1RqW8Vw5c.O/am=RACAAQ/d=1/ed=1/rs=AN8SPfq7PgCJcVyPXh34cHrvxWDGKaf50A/m=el_main"></script></head><body class="subpage-wide" style="position: relative; min-height: 100%; top: 0px;"><div onclick="bShow=true" id="calendar" style="z-index:+999;position:absolute;visibility:hidden;"><table width="220" style="font-family:arial;font-size:11px;border-width:1;border-style:solid;border-color:#a0a0a0;font-family:arial; font-size:11px}" bgcolor="#ffffff"><tbody><tr bgcolor="#333333"><td><table width="218"><tbody><tr><td style="padding:2px;font-family:arial; font-size:11px;"><font color="#ffffff"><b><span id="caption"><span id="spanLeft" style="border-style:solid;border-width:1;border-color:#CCCCCC;cursor:pointer" onmouseover="swapImage(&quot;changeLeft&quot;,&quot;left2.gif&quot;);this.style.borderColor=&quot;#88AAFF&quot;;window.status=&quot;Click to scroll to previous month. Hold mouse button to scroll automatically.&quot;" onclick="javascript:decMonth()" onmouseout="clearInterval(intervalID1);swapImage(&quot;changeLeft&quot;,&quot;left1.gif&quot;);this.style.borderColor=&quot;#CCCCCC&quot;;window.status=&quot;&quot;" onmousedown="clearTimeout(timeoutID1);timeoutID1=setTimeout(&quot;StartDecMonth()&quot;,500)" onmouseup="clearTimeout(timeoutID1);clearInterval(intervalID1)">&nbsp;<img id="changeLeft" src="/admin/templates/default/folder_images/icons/left1.gif" width="10" height="11" border="0">&nbsp;</span>&nbsp;<span id="spanRight" style="border-style:solid;border-width:1;border-color:#CCCCCC;cursor:pointer" onmouseover="swapImage(&quot;changeRight&quot;,&quot;right2.gif&quot;);this.style.borderColor=&quot;#88AAFF&quot;;window.status=&quot;Click to scroll to next month. Hold mouse button to scroll automatically.&quot;" onmouseout="clearInterval(intervalID1);swapImage(&quot;changeRight&quot;,&quot;right1.gif&quot;);this.style.borderColor=&quot;#CCCCCC&quot;;window.status=&quot;&quot;" onclick="incMonth()" onmousedown="clearTimeout(timeoutID1);timeoutID1=setTimeout(&quot;StartIncMonth()&quot;,500)" onmouseup="clearTimeout(timeoutID1);clearInterval(intervalID1)">&nbsp;<img id="changeRight" src="/admin/templates/default/folder_images/icons/right1.gif" width="10" height="11" border="0">&nbsp;</span>&nbsp;<span id="spanMonth" style="border-style:solid;border-width:1;border-color:#CCCCCC;cursor:pointer" onmouseover="swapImage(&quot;changeMonth&quot;,&quot;drop2.gif&quot;);this.style.borderColor=&quot;#88AAFF&quot;;window.status=&quot;Click to select a month.&quot;" onmouseout="swapImage(&quot;changeMonth&quot;,&quot;drop1.gif&quot;);this.style.borderColor=&quot;#CCCCCC&quot;;window.status=&quot;&quot;" onclick="popUpMonth()"></span>&nbsp;<span id="spanYear" style="border-style:solid;border-width:1;border-color:#CCCCCC;cursor:pointer" onmouseover="swapImage(&quot;changeYear&quot;,&quot;drop2.gif&quot;);this.style.borderColor=&quot;#88AAFF&quot;;window.status=&quot;Click to select a year.&quot;" onmouseout="swapImage(&quot;changeYear&quot;,&quot;drop1.gif&quot;);this.style.borderColor=&quot;#CCCCCC&quot;;window.status=&quot;&quot;" onclick="popUpYear()"></span>&nbsp;</span></b></font></td><td align="right"><a href="javascript:hideCalendar()"><img src="/admin/templates/default/folder_images/icons/close.gif" width="15" height="13" border="0" alt="Close the Calendar"></a></td></tr></tbody></table></td></tr><tr><td style="padding:5px" bgcolor="#ffffff"><span id="content"></span></td></tr><tr bgcolor="#f0f0f0"><td style="padding:5px" align="center"><span id="lblToday">Today is <a onmousemove="window.status=&quot;Go To Current Month&quot;" onmouseout="window.status=&quot;&quot;" title="Go To Current Month" style="text-decoration:none;color:black;" href="javascript:monthSelected=monthNow;yearSelected=yearNow;constructCalendar();">Thu, 1 Oct	2026</a></span></td></tr></tbody></table></div><div id="selectMonth" style="z-index:+999;position:absolute;visibility:hidden;"></div><div id="selectYear" style="z-index:+999;position:absolute;visibility:hidden;"></div>
+<script src="/scripts/datepicker/CalendarPopup.js" type="text/javascript"></script>
+<script src="/media/common/global/scripts/restrict-special-char.js" type="text/javascript"></script>
+<script language="JavaScript">
+	var cal = new CalendarPopup();
+</script>
+
+
+
+<!--Map Icon-->
+<script>
+var icon = [];
+icon[0] = new GIcon();
+icon[0].image = "/media/lpmoxford.co.uk/images/default/map-icon.png";
+icon[0].iconSize = new GSize(60,40);
+icon[0].iconAnchor = new GPoint(0,0);
+icon[0].infoWindowAnchor = new GPoint(10,10);
+
+</script>
+<!--Map Icon End-->
+
+
+ <div class="body1">
+    	<div class="body2">
+        	<div class="header-wrapper">
+            	<div class="header">
+                	<div class="logo"><a href="/"><img src="/media/lpmoxford.co.uk/images/default/logo.png" border="0"></a></div>
+                  <div class="contact">info@lpmoxford.co.uk | Call Us On 01865202004</div>
+                  <div class="translate"><div class="flags">
+<div id="google_translate_element"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="nl">Dutch</option><option value="fi">Finnish</option><option value="fr">French</option><option value="it">Italian</option><option value="no">Norwegian</option><option value="ru">Russian</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr,nl,it,fi,no,ru'
+  }, 'google_translate_element');
+}
+</script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div></div>
+                  <div class="register"><a href="/myarea">Sign In</a> | <a href="/register">Register</a></div>
+                  <div class="strap-line"><h2>LOGO Property Specialist</h2>
+<p>A professional service with a difference</p></div>
+                  <div class="social-top">
+                  <a href="#"><img src="../../media/lpmoxford.co.uk/images/social/facebook.gif" border="0"></a>
+<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/twitter.gif" border="0"></a>
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/blog.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/fliker.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/linkedin.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/myspace.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/pica.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/vimeo.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/youtube.gif" border="0" /></a>-->
+                  </div>
+                </div>
+            </div>
+            <div class="top-menu"><div class="menu">
+		<ul><li><a href="/home">Home</a>
+				<!--[if lte IE 6]>
+				<a href="/home" >Home
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/about-us ">About Us</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/property-search">Property Search</a>
+				<!--[if lte IE 6]>
+				<a href="/property-search" >Property Search
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/property-search~for=1 ">Properties For Sale</a></li><li><a href="/property-search~for=2 ">Properties To Let</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/tenants">Tenants</a>
+				<!--[if lte IE 6]>
+				<a href="/tenants" >Tenants
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/tenant-guide ">Tenant Guide</a></li><li><a href="/property-search ">Property Search</a></li><li><a href="/register ">Register</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/buyers">Buyers</a>
+				<!--[if lte IE 6]>
+				<a href="/buyers" >Buyers
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/buyers-guide ">Buyers Guide</a></li><li><a href="/property-search~for=1 ">Property Search</a></li><li><a href="/property-search~for=1 ">Register</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/landlord-guide">Landlords</a>
+				<!--[if lte IE 6]>
+				<a href="/landlord-guide" >Landlords
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/landlord-guide ">Landlord Guide</a></li><li><a href="/valuation ">Appraisal</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/register">Register</a>
+				<!--[if lte IE 6]>
+				<a href="/register" >Register
+				<table><tr><td>
+				<![endif]-->
+				<!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/vendors">Vendors</a>
+				<!--[if lte IE 6]>
+				<a href="/vendors" >Vendors
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/vendor-guide ">Vendor Guide</a></li><li><a href="/valuation ">Appraisal</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/contact-us">Contact Us</a>
+				<!--[if lte IE 6]>
+				<a href="/contact-us" >Contact Us
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="https://www.lpmoxford.co.uk/media/lpmoxford.co.uk/images/Complaints_Procedure.pdf ">Complaints Procedure</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li></ul></div></div>
+            <div class="banner-wrap">
+                <div class="banner"><img src="/media/lpmoxford.co.uk/images/template/banner2.jpg" border="0"></div>
+            </div>
+            <div class="content-wrapper">
+            	<div class="content text">
+                
+<link href="/templates/beta_template/styles/details.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/text.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/boxes.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/quick-search.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/results.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/style.css" rel="stylesheet" type="text/css">
+<link href="/templates/beta_template/styles/myarea.css" rel="stylesheet" type="text/css">
+
+<form method="post" style="margin:20px 0; padding:0;">
+<table width="940" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="460"><table border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td align="center" valign="top" width="93"><img src="../../media/lpmoxford.co.uk/images/default-icons/sms.png" width="62" height="74"></td>
+        <td><p><strong>Mobile &amp; Email Alerts</strong><br>
+          be the first to receive details of new properties. By registering we can email and text you with details of new properties as soon as they come onto the market with us</p></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" valign="top"><img src="../../media/lpmoxford.co.uk/images/default-icons/search.png" width="68" height="67"></td>
+        <td><p><strong>Save properties to a personal portfolio</strong><br>
+          a really neat way of keeping track and short-listing <br>
+          properties you are especially interested in</p></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" valign="top"><img src="../../media/lpmoxford.co.uk/images/default-icons/house.png" width="73" height="70"></td>
+        <td><p><strong>Landlord / Vendors Zone</strong><br>
+          View statements, Invoices, Make a maintenance <br>
+          request and more</p></td>
+      </tr>
+    </tbody></table></td>
+    <td width="20">&nbsp;</td>
+    <td width="460" valign="middle">
+    	<div class="login-box">
+        	<h3>Login to your account</h3>
+        	<p>Username</p>
+            <input name="username" type="text" class="login-input" id="username" tabindex="1">
+
+
+        	<p>Pasword</p>
+            <input name="password" type="password" class="login-input" id="password" tabindex="2">
+
+
+       	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td align="left"><p><a href="/register">Register FREE today!</a><br>
+        <a href="/myarea~action=passrem" target="_blank">Forgot your password?</a></p></td>
+    <td align="right"><input type="submit" value="LOG IN" class="button" name="imageField"></td>
+  </tr>
+</tbody></table>
+
+    	</div>
+    </td>
+  </tr>
+</tbody></table>
+
+</form>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+            	<div class="footer">
+                	<div class="footer-logo"><img src="/media/lpmoxford.co.uk/images/default/logo.png"></div>
+              <div class="portals">
+                    	<table border="0" cellspacing="20" cellpadding="0" align="center">
+	<tbody>
+	  <tr> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light1.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light2.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light3.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light4.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light5.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light6.png" height="50" /></td>-->
+		<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light7.png" height="50"></td>
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light8.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light9.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light10.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light11.png" height="50" /></td>-->
+		<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light12.png" height="50"></td>
+
+		<td><img src="../../media/lpmoxford.co.uk/images/portal/tpo_tsi.png" height="100"></td>
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light13.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light14.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light15.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light16.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light17.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light18.png" height="50" /></td>-->
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light19.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-light20.png" height="50" /></td>--> 
+		
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark1.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark2.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark3.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark4.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark5.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark6.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark7.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark8.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark9.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark10.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark11.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark12.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark13.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark14.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark15.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark16.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark17.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark18.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark19.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-colour-dark20.png" height="50" /></td>--> 
+		
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light1.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light2.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light3.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light4.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light5.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light6.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light7.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light8.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light9.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light10.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light11.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light12.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light13.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light14.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light15.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light16.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light17.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light18.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light19.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-light20.png" height="50" /></td>--> 
+		
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark1.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark2.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark3.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark4.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark5.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark6.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark7.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark8.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark9.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark10.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark11.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark12.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark13.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark14.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark15.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark16.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark17.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark18.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark19.png" height="50" /></td>--> 
+		<!--<td><img src="../../media/lpmoxford.co.uk/images/portal/portal-bandw-dark20.png" height="50" /></td>--> 
+	  </tr>
+	</tbody>
+  </table>
+                    </div>
+                  <div class="bottom-menu">
+                  	<div class="menu">
+		<ul><li><a href="/home">Home</a>
+				<!--[if lte IE 6]>
+				<a href="/home" >Home
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/about-us ">About Us</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/property-search">Property Search</a>
+				<!--[if lte IE 6]>
+				<a href="/property-search" >Property Search
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/property-search~for=1 ">Properties For Sale</a></li><li><a href="/property-search~for=2 ">Properties To Let</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/tenants">Tenants</a>
+				<!--[if lte IE 6]>
+				<a href="/tenants" >Tenants
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/tenant-guide ">Tenant Guide</a></li><li><a href="/property-search ">Property Search</a></li><li><a href="/register ">Register</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/buyers">Buyers</a>
+				<!--[if lte IE 6]>
+				<a href="/buyers" >Buyers
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/buyers-guide ">Buyers Guide</a></li><li><a href="/property-search~for=1 ">Property Search</a></li><li><a href="/property-search~for=1 ">Register</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/landlord-guide">Landlords</a>
+				<!--[if lte IE 6]>
+				<a href="/landlord-guide" >Landlords
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/landlord-guide ">Landlord Guide</a></li><li><a href="/valuation ">Appraisal</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/register">Register</a>
+				<!--[if lte IE 6]>
+				<a href="/register" >Register
+				<table><tr><td>
+				<![endif]-->
+				<!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/vendors">Vendors</a>
+				<!--[if lte IE 6]>
+				<a href="/vendors" >Vendors
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="/vendor-guide ">Vendor Guide</a></li><li><a href="/valuation ">Appraisal</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li><li><a href="/contact-us">Contact Us</a>
+				<!--[if lte IE 6]>
+				<a href="/contact-us" >Contact Us
+				<table><tr><td>
+				<![endif]-->
+				<ul><li><a href="https://www.lpmoxford.co.uk/media/lpmoxford.co.uk/images/Complaints_Procedure.pdf ">Complaints Procedure</a></li></ul><!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
+					</li></ul></div>
+                  </div>
+                  <div class="social-bottom">
+                    <a href="#"><img src="../../media/lpmoxford.co.uk/images/social/facebook.gif" border="0"></a>
+<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/twitter.gif" border="0"></a>
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/blog.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/fliker.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/linkedin.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/myspace.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/pica.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/vimeo.gif" border="0" /></a>-->
+<!--<a href="#"><img src="../../media/lpmoxford.co.uk/images/social/youtube.gif" border="0" /></a>-->
+                    </div>
+              </div>
+          </div>
+          <div class="footer-wrapper2">
+<div class="footer2">
+                  <div class="accreditation">lpmoxford.co.uk | Â© All Rigts reserved | <a href="/sitemap">Sitemap</a> |<a href="/terms"> Terms &amp; Conditions</a></div>
+           
+           </div>
+          </div>
+          </div>
+        </div>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;9a4e3a15a43f4773864286a228675a4c&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="display: none; border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Original text</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>

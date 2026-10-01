@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your next chapter in Oxford with LPM Residential. Explore homes to rent, property sales and personal service for landlords and sellers.">
+  <meta name="theme-color" content="#183f35">
+  <title>LPM Residential — A place to belong in Oxford</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/oxford-radcliffe.jpg" as="image" fetchpriority="high">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/></symbol>
+    <symbol id="bed" viewBox="0 0 24 24"><path d="M3 18v3m18-3v3M3 12V5h18v7M1 18v-4a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v4ZM6 12V8h5v4m2 0V8h5v4"/></symbol>
+    <symbol id="bath" viewBox="0 0 24 24"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Zm2 8-1 2m15-2 1 2M5 12V4a3 3 0 0 1 6 0v1M8 6h6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="LPM Residential home"><span class="brand-name">lpm<span>.</span></span><span class="brand-subtitle">Residential</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#properties" data-search-mode="buy">Buy</a>
+      <a href="#properties" data-search-mode="rent">Rent</a>
+      <a href="#services">Landlords</a>
+      <a href="#sell">Sell</a>
+      <a href="#about">About us</a>
+    </nav>
+    <a class="button button-outline header-contact" href="#contact">Get in touch<svg class="icon"><use href="#arrow"/></svg></a>
+    <button class="menu-toggle icon-button" aria-label="Open navigation" aria-controls="mobile-navigation" aria-expanded="false"><svg class="icon"><use href="#menu"/></svg></button>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+      <a href="#properties" data-search-mode="buy">Buy a home<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#properties" data-search-mode="rent">Rent a home<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#services">For landlords<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#sell">Sell your property<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#about">About us<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#contact">Get in touch<svg class="icon"><use href="#arrow"/></svg></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <h1 id="hero-title">A place to live.<br><em>A place to belong.</em></h1>
+          <p>Oxford is more than a location. It’s home.<br class="desktop-break"> Find your next chapter with people who know it best.</p>
+          <div class="search-mode" role="group" aria-label="Choose rent or buy">
+            <button type="button" class="mode-button active" data-mode="rent" aria-pressed="true">Rent</button>
+            <button type="button" class="mode-button" data-mode="buy" aria-pressed="false">Buy</button>
+          </div>
+        </div>
+        <div class="hero-media"><img src="assets/oxford-radcliffe.jpg" alt="An editorial illustration of the Radcliffe Camera and Oxford’s honey-coloured architecture" width="1600" height="1200" fetchpriority="high"></div>
+      </div>
+      <form class="search-panel" id="property-search">
+        <div class="search-field location-field"><label for="location">Location</label><div class="select-wrap"><select id="location" name="location"><option value="all">Oxford &amp; surrounding areas</option value="oxford">Oxford</option><option value="cowley">Cowley</option><option value="centre">City centre</option><option value="rosehill">Rose Hill</option><option value="littlemore">Littlemore</option><option value="headington">Headington</option></select><svg class="icon"><use href="#chevron"/></svg></div></div>
+        <div class="search-field"><label for="property-type">Property type</label><div class="select-wrap"><select id="property-type" name="type"><option value="all">All properties</option><option value="flat">Flat / apartment</option><option value="house">House</option></select><svg class="icon"><use href="#chevron"/></svg></div></div>
+        <div class="search-field bedrooms-field"><label for="bedrooms">Bedrooms</label><div class="select-wrap"><select id="bedrooms" name="bedrooms"><option value="0">Any</option><option value="1">1+ bedrooms</option><option value="2">2+ bedrooms</option><option value="3">3+ bedrooms</option><option value="4">4+ bedrooms</option><option value="5">5+ bedrooms</option></select><svg class="icon"><use href="#chevron"/></svg></div></div>
+        <button class="button search-button" type="submit">Find a home<span class="button-arrow"><svg class="icon"><use href="#arrow"/></svg></span></button>
+      </form>
+    </section>
+
+    <div class="service-strip wrap">
+      <p><em>Local knowledge.</em> Personal service.</p>
+      <a href="#properties">Sales &amp; lettings<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#services">Property management<svg class="icon"><use href="#arrow"/></svg></a>
+      <a href="#about">Oxford &amp; beyond<svg class="icon"><use href="#arrow"/></svg></a>
+    </div>
+
+    <section class="properties-section wrap" id="properties" aria-labelledby="properties-title">
+      <div class="section-heading"><div><h2 id="properties-title">Find your <em>next chapter.</em></h2><p>Spaces for new beginnings, in and around Oxford.</p></div><a class="button button-outline" href="https://www.lpmoxford.co.uk/property-search" target="_blank" rel="noopener">Explore all properties<svg class="icon"><use href="#arrow"/></svg></a></div>
+      <div class="results-toolbar" hidden><p id="result-count" role="status"></p><div><button class="text-button" id="saved-filter" aria-pressed="false">Saved homes <span id="saved-count">0</span></button><button class="text-button" id="clear-search">Clear filters<svg class="icon"><use href="#close"/></svg></button></div></div>
+      <div class="property-grid">
+        <article class="property-card" data-id="471" data-mode="rent" data-location="cowley" data-type="flat" data-beds="2">
+          <div class="property-photo"><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=471" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/garsington-road.jpg" width="800" height="600" alt="Modern apartments on Garsington Road" loading="lazy"></a><span class="property-tag">To let</span><button class="save-button icon-button" data-save="471" aria-label="Save Garsington Road" aria-pressed="false"><svg class="icon"><use href="#heart"/></svg></button></div>
+          <div class="property-info"><h3><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=471" target="_blank" rel="noopener">Garsington Road</a></h3><p class="property-location">Oxford, OX4</p><p class="property-price">£1,645 <span>pcm</span></p><div class="property-facts"><span><svg class="icon"><use href="#bed"/></svg>2 beds</span><span><svg class="icon"><use href="#bath"/></svg>2 baths</span></div><a class="property-link" href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=471" target="_blank" rel="noopener" aria-label="View Garsington Road property">View property<svg class="icon"><use href="#arrow"/></svg></a></div>
+        </article>
+        <article class="property-card" data-id="431" data-mode="rent" data-location="centre" data-type="house" data-beds="2">
+          <div class="property-photo"><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=431" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/mill-street.jpg" width="800" height="600" alt="The red-brick terrace on Mill Street" loading="lazy"></a><span class="property-tag">To let</span><button class="save-button icon-button" data-save="431" aria-label="Save Mill Street" aria-pressed="false"><svg class="icon"><use href="#heart"/></svg></button></div>
+          <div class="property-info"><h3><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=431" target="_blank" rel="noopener">Mill Street</a></h3><p class="property-location">Oxford, OX2</p><p class="property-price">£2,350 <span>pcm</span></p><div class="property-facts"><span><svg class="icon"><use href="#bed"/></svg>2 beds</span><span><svg class="icon"><use href="#bath"/></svg>1 bath</span></div><a class="property-link" href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=431" target="_blank" rel="noopener" aria-label="View Mill Street property">View property<svg class="icon"><use href="#arrow"/></svg></a></div>
+        </article>
+        <article class="property-card" data-id="184" data-mode="rent" data-location="rosehill" data-type="flat" data-beds="1">
+          <div class="property-photo"><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=184" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/lenthall-road.jpg" width="800" height="600" alt="Bright living room in the Lenthall Road flat" loading="lazy"></a><span class="property-tag">To let</span><button class="save-button icon-button" data-save="184" aria-label="Save Lenthall Road" aria-pressed="false"><svg class="icon"><use href="#heart"/></svg></button></div>
+          <div class="property-info"><h3><a href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=184" target="_blank" rel="noopener">Lenthall Road</a></h3><p class="property-location">Oxford, OX4</p><p class="property-price">£1,195 <span>pcm</span></p><div class="property-facts"><span><svg class="icon"><use href="#bed"/></svg>1 bed</span><span><svg class="icon"><use href="#bath"/></svg>1 bath</span></div><a class="property-link" href="https://www.lpmoxford.co.uk/property-search~action=detail,pid=184" target="_blank" rel="noopener" aria-label="View Lenthall Road property">View property<svg class="icon"><use href="#arrow"/></svg></a></div>
+        </article>
+      </div>
+      <div class="empty-state" hidden><h3>A little further afield?</h3><p id="empty-message">There are no matches in this selection. Explore the full collection or try a broader search.</p><a class="button button-outline" id="empty-link" href="https://www.lpmoxford.co.uk/property-search" target="_blank" rel="noopener">Explore the full collection<svg class="icon"><use href="#arrow"/></svg></a></div>
+      <p class="listing-note">A selection from LPM’s listings, captured 1 October 2026. Please check the property details for current price and availability.</p>
+    </section>
+
+    <section class="services-section" id="services" aria-labelledby="services-title">
+      <div class="wrap services-layout"><div class="services-copy"><h2 id="services-title">Your property.<br>Our <em>local expertise.</em></h2><p>From finding the right tenants to making your next move, we’re here to make property feel straightforward.</p><a class="button button-lime" href="https://www.lpmoxford.co.uk/valuation" target="_blank" rel="noopener">Book a free valuation<svg class="icon"><use href="#arrow"/></svg></a></div><div class="service-list"><a class="service-row" href="https://www.lpmoxford.co.uk/landlord-guide" target="_blank" rel="noopener"><span class="service-number">01</span><div><h3>Let your property</h3><p>Good tenants. Thoughtful management.</p></div><span class="round-arrow"><svg class="icon"><use href="#arrow"/></svg></span></a><a class="service-row" id="sell" href="https://www.lpmoxford.co.uk/vendors" target="_blank" rel="noopener"><span class="service-number">02</span><div><h3>Sell your property</h3><p>A considered approach to your next chapter.</p></div><span class="round-arrow"><svg class="icon"><use href="#arrow"/></svg></span></a></div></div>
+    </section>
+
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <div class="about-layout"><div class="about-photo"><img src="assets/oxford-lane.jpg" width="1200" height="1440" alt="An editorial illustration of a quiet Oxford lane with a bicycle and climbing greenery" loading="lazy"></div><div class="about-copy"><p class="section-label">At home in Oxford</p><h2 id="about-title">Big on Oxford.<br>Even bigger on <em>you.</em></h2><p>We’re LPM Residential. A local team bringing a personal approach to sales, lettings and property management.</p><p>From your first viewing to the day you get the keys, we’re here for the whole journey.</p><a class="button button-outline" href="https://www.lpmoxford.co.uk/about-us" target="_blank" rel="noopener">Get to know us<svg class="icon"><use href="#arrow"/></svg></a></div></div>
+      <div class="locality-strip" aria-label="Explore local homes"><a href="#properties" data-area="oxford">Oxford</a><a href="#properties" data-area="cowley">Cowley</a><a href="#properties" data-area="headington">Headington</a><a href="#properties" data-area="littlemore">Littlemore</a><a href="https://www.lpmoxford.co.uk/property-search" target="_blank" rel="noopener">Beyond the city</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact"><div class="wrap"><div class="footer-main"><h2>Let’s talk about<br>your next chapter.<a href="mailto:info@lpmoxford.co.uk" class="footer-arrow" aria-label="Email LPM about your next chapter"><svg class="icon"><use href="#arrow"/></svg></a></h2><div class="contact-details"><a class="contact-phone" href="tel:+441865202004">01865 202004</a><a class="contact-email" href="mailto:info@lpmoxford.co.uk">info@lpmoxford.co.uk</a><address>154 Cowley Road, Oxford, OX4 1UE</address><p>Monday–Friday, 9am–5pm</p></div></div><div class="footer-bottom"><a class="footer-brand" href="#" aria-label="LPM Residential home">lpm<span>.</span></a><nav aria-label="Footer navigation"><a href="#properties">Properties</a><a href="#services">Landlords</a><a href="https://www.lpmoxford.co.uk/contact-us" target="_blank" rel="noopener">Contact</a><a href="https://www.lpmoxford.co.uk/media/lpmoxford.co.uk/images/Complaints_Procedure.pdf" target="_blank" rel="noopener">Complaints</a></nav><p>© 2026 LPM Residential</p></div></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

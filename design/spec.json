@@ -1,0 +1,44 @@
+{
+  "concepts": [
+    "01-hero.png",
+    "02-properties-services.png",
+    "03-about-contact.png"
+  ],
+  "conceptPrompts": [
+    "Use case ui-mockup. Premium editorial estate agency website LPM Residential, Oxford UK. HTML/CSS buildable screenshot, crisp fully readable native UI. Consistent design system: deep forest #183f35, warm ivory #f7f7f0, chartreuse #d4ed8a accent, near black forest text, geometric sans like Manrope with elegant italic serif accent. Extra generous whitespace, 60px side gutters, 1320px content on 1440px desktop. Small 8px media corners, pill primary buttons, thin outline arrows, fine rules. No fake statistics, ratings, awards, testimonials, hero eyebrow or badge. Generate a standalone 1440x1100 first section web design screenshot. Header ivory height 100: left lowercase oversized wordmark 'lpm.' in forest, small 'RESIDENTIAL' under; center nav 'Buy' 'Rent' 'Landlords' 'Sell' 'About us'; right outlined 'Get in touch' with arrow. Main hero ivory split: large left headline 'A place to live.' then italic forest 'A place to belong.' with 76px elegant typography, supporting 'Oxford is more than a location. It\u2019s home. Find your next chapter with people who know it best.' Hero right sweeping high quality photograph of Oxford Radcliffe Camera honey stone architecture and street in late summer sunshine. Hero composition 48/52, image 660x530 rounded 8px with no tint. Under text segmented 'Rent' 'Buy' then horizontal white search panel floating across bottom of hero: Location 'Oxford & surrounding areas', Property type 'All properties', Bedrooms 'Any', dark green 'Find a home' circular arrow. Below hero full width narrow ruled services strip 'Local knowledge. Personal service.' then small links 'Sales & lettings' 'Property management' 'Oxford & beyond'. Next section preview at bottom heading 'Find your next chapter.' and 'Explore all properties' button. Editorial premium polished not tech startup.",
+    "Use case ui-mockup. Premium editorial estate agency website LPM Residential, Oxford UK. HTML/CSS buildable screenshot, crisp fully readable native UI. Consistent design system: deep forest #183f35, warm ivory #f7f7f0, chartreuse #d4ed8a accent, near black forest text, geometric sans like Manrope with elegant italic serif accent. Extra generous whitespace, 60px side gutters, 1320px content on 1440px desktop. Small 8px media corners, pill primary buttons, thin outline arrows, fine rules. No fake statistics, ratings, awards, testimonials, hero eyebrow or badge. Generate standalone 1440x1200 middle-section web screenshot, no header or hero. Top ivory featured property section heading 'Find your next chapter.' left, supporting 'Spaces for new beginnings, in and around Oxford.' and outlined 'Explore all properties' right. Three equal 420px columns of editorial property listings with large landscape photos: an Oxford modern apartment, an Oxford Victorian terrace, bright living room; small 'TO LET' ivory corner label and heart save circle top right. Below images on open ivory not boxed cards: 'Garsington Road' 'Oxford, OX4', '\u00a31,645 pcm', line icons '2 beds' '2 baths'; 'Rivermead Road' 'Oxford, OX4' '\u00a31,750 pcm' '3 beds' '1 bath'; 'Cowley Road' 'Oxford, OX4' '\u00a32,495 pcm' '5 beds' '1 bath'. Fine bottom rules and short 'View property' arrows. Bottom half wide dark forest green band with left large ivory headline 'Your property.\\nOur local expertise.' and supporting 'From finding the right tenants to making your next move, we\u2019re here to make property feel straightforward.' and chartreuse button 'Book a free valuation'. Right two thin ruled text rows numbered 01 'Let your property' subtitle 'Good tenants. Thoughtful management.' arrow, 02 'Sell your property' subtitle 'A considered approach to your next chapter.' arrow. Broad spacing high end restrained design. All property imagery is illustrative in concept only.",
+    "Use case ui-mockup. Premium editorial estate agency website LPM Residential, Oxford UK. HTML/CSS buildable screenshot, crisp fully readable native UI. Consistent design system: deep forest #183f35, warm ivory #f7f7f0, chartreuse #d4ed8a accent, near black forest text, geometric sans like Manrope with elegant italic serif accent. Extra generous whitespace, 60px side gutters, 1320px content on 1440px desktop. Small 8px media corners, pill primary buttons, thin outline arrows, fine rules. No fake statistics, ratings, awards, testimonials, hero eyebrow or badge. Generate standalone 1440x1100 final-section web screenshot no header hero or property cards. Top ivory section two columns: left 560x480 sunlit editorial photo of Oxford cobbled lane honey-coloured stone with bicycle climbing greenery, right small 'AT HOME IN OXFORD' label (only section label, not hero), huge heading 'Big on Oxford.\\nEven bigger on you.' final 'you.' elegant italic serif. Supporting 'We\u2019re LPM Residential. A local team bringing a personal approach to sales, lettings and property management.' then 'From your first viewing to the day you get the keys, we\u2019re here for the whole journey.' outlined 'Get to know us' arrow. Beneath thin ruled horizontal locality row 'Oxford' 'Cowley' 'Headington' 'Littlemore' 'Beyond the city'. Bottom forest footer spacious large heading 'Let\u2019s talk about\\nyour next chapter.' left with chartreuse round arrow action; right '01865 202004' and 'info@lpmoxford.co.uk', below '154 Cowley Road, Oxford, OX4 1UE' and 'Monday\u2013Friday, 9am\u20135pm'. Footer bottom line wordmark 'lpm.' left; links 'Properties' 'Landlords' 'Contact' 'Complaints'; right '\u00a9 2026 LPM Residential'. Exact shared design consistent with premium airy website. No fake metrics."
+  ],
+  "assetPrompts": [
+    "Use case photorealistic-natural. Standalone editorial website hero photograph, NO UI, no text. Radcliffe Camera in Oxford England viewed from its southeast pedestrian cobbled lane, beautiful detailed honey stone circular building and slate dome filling composition, neighbouring Gothic spire on right, blue summer sky with small white clouds, warm afternoon sunlight, iron fence and a few bicycles at ground level, natural greenery. Premium architectural travel photography, realistic stone detail, understated film colour, no colour overlay, no invented signs. Wide 4:3 composition, full dome visible with comfortable sky margin. Image meant to fill 660x620 image frame.",
+    "Use case photorealistic-natural. Standalone premium editorial architectural photo of an Oxford England narrow cobblestone lane between historic warm honey-coloured stone college buildings, a vintage bicycle leaning by a stone wall on left, leafy green vine and delicate climbing white roses, black lantern, Gothic spire visible in distant background. Soft natural late summer sunlight, rich but realistic colours, quiet lived-in Oxford atmosphere. Portrait-ish 6:5 composition, no people foreground, no text, no logo, no interface. Matches warm Oxford architectural website hero photography."
+  ],
+  "generation": "Built-in image_gen tool",
+  "tokens": {
+    "background": "#f7f7f0",
+    "forest": "#183f35",
+    "text": "#173c33",
+    "accent": "#d4ed8a",
+    "white": "#ffffff",
+    "radius": 8,
+    "fontDisplay": "Instrument Serif",
+    "fontBody": "DM Sans",
+    "gutter": 56
+  },
+  "sections": [
+    "Header and hero with search",
+    "Local service strip",
+    "Featured properties",
+    "Landlord and seller services",
+    "About Oxford",
+    "Contact footer"
+  ],
+  "intentionalDeviations": [
+    "Use real LPM property photography instead of fictional concept listing images.",
+    "Use consistent serif display headings across sections to unify the independently generated concepts.",
+    "Add functional search results and accessible mobile navigation as required responsive states.",
+    "Property snapshot disclosure below cards; no live availability claim.",
+    "Feature Garsington Road, Mill Street and Lenthall Road using their actual source photos and verified snapshot facts; the concept properties were illustrative.",
+    "Use local Instrument Serif for display and DM Sans for interface/body text; supporting hero copy remains sans-serif for readability."
+  ]
+}
